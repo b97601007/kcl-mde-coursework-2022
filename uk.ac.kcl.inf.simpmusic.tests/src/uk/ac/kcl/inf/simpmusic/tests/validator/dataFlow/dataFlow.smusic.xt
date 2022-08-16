@@ -1,0 +1,4 @@
+/* XPECT_SETUP uk.ac.kcl.inf.simpmusic.tests.validator.dataFlow.DataFlowValidTest END_SETUP */
+
+//  XPECT warnings --> "The song may not be completed (wrong number of beats)" at "Do"
+Do Re Mi - Sol

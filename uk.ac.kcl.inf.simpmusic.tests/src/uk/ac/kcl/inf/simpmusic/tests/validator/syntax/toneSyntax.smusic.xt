@@ -1,0 +1,8 @@
+/* XPECT_SETUP uk.ac.kcl.inf.simpmusic.tests.validator.syntax.SyntaxValidTest END_SETUP */
+
+Sol
+Mi
+//  XPECT warnings --> "The modification of tune should not be greater than 9" at "10"
+Mi(+10)
+//  XPECT warnings --> "The modification of tune should not be less than -4" at "5"
+Fa(-5)

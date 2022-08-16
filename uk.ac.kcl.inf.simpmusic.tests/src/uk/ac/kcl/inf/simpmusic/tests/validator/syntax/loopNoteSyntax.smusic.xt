@@ -1,0 +1,6 @@
+/* XPECT_SETUP uk.ac.kcl.inf.simpmusic.tests.validator.syntax.SyntaxValidTest END_SETUP */
+
+//  XPECT warnings --> "Loop count must be greater than 0" at "0"
+0 times do
+	Do Do Do -
+end

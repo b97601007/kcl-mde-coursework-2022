@@ -1,0 +1,19 @@
+/* XPECT_SETUP uk.ac.kcl.inf.simpmusic.tests.validator.syntax.SyntaxValidTest END_SETUP */
+
+/*  XPECT warnings ---
+"amount of Amplitude should not be more than 1" at ">"
+"amount of Amplitude should not be more than 1" at ">"
+--- */
+Mi(>>) -
+
+/*  XPECT warnings ---
+"amount of Timbre should not be more than 1" at "sharp"
+"amount of Timbre should not be more than 1" at "flat"
+--- */
+Mi(sharp>flat) -
+
+/*  XPECT warnings ---
+"amount of Tone should not be more than 1" at "+"
+"amount of Tone should not be more than 1" at "-"
+--- */
+Mi(+1-1) -

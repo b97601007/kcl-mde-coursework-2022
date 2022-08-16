@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="simpMusic" nsURI="http://www.ac.uk/kcl/inf/SimpMusic" nsPrefix="simpMusic">
+  <eClassifiers xsi:type="ecore:EClass" name="SimpleMusic">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="notes" upperBound="-1"
+        eType="#//Note" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Note"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LoopNote" eSuperTypes="#//Note">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="count" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="notes" upperBound="-1"
+        eType="#//Note" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Solfege" eSuperTypes="#//Note">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="note" eType="#//Solfa"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Solfa">
+    <eLiterals name="Do" literal="Do"/>
+    <eLiterals name="Re" value="1" literal="Re"/>
+    <eLiterals name="Mi" value="2" literal="Mi"/>
+    <eLiterals name="Fa" value="3" literal="Fa"/>
+    <eLiterals name="Sol" value="4" literal="Sol"/>
+    <eLiterals name="La" value="5" literal="La"/>
+    <eLiterals name="Si" value="6" literal="Si"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Sleep" eSuperTypes="#//Note">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="note" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SolfegeWithModification" eSuperTypes="#//Note">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="note" eType="#//Solfege"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mods" upperBound="-1" eType="#//Modification"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Modification"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Amplitude" eSuperTypes="#//Modification">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="amp" eType="#//AmpType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="AmpType">
+    <eLiterals name="weak" literal=">"/>
+    <eLiterals name="strong" value="1" literal="&lt;"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Timbre" eSuperTypes="#//Modification">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timbre" eType="#//TimbreType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="TimbreType">
+    <eLiterals name="sharp" literal="sharp"/>
+    <eLiterals name="flat" value="1" literal="flat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Tone" eSuperTypes="#//Modification">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tone" eType="#//ToneType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="val" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ToneType">
+    <eLiterals name="high" literal="+"/>
+    <eLiterals name="sub" value="1" literal="-"/>
+  </eClassifiers>
+</ecore:EPackage>
