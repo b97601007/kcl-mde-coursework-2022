@@ -1,4 +1,5 @@
-coursework-group-15 created by GitHub Classroom
+[KCL] Model Driven Engineering
+It is a coursework project created by Hsin-Ying Tsai and Yuchen Zhang. In this coursework, we designed a DSML in the music domain, which generates a language that can be played in Sonic Pi. The DSML simplifies the generation of music; therefore, we named it "SimpMusic," which is short for "simple music."
 
 # SimpMusic to Sonic Pi
 
